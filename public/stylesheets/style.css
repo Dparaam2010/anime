@@ -85,7 +85,7 @@ table {
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid hotpink;
 }
 
 table td {
@@ -99,14 +99,14 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+  background-color: orange;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
 }
 
 #list a:hover {
-  background-color: white;
+  background-color: pink;
 }
 
 #show-page {
