@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<h2>Anime List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release Year</th>
+      <th>Rating</th>
+      <th>Cast</th>
+      <th>Now Showing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Write the line of EJS to iterate over movies using forEach -->
+    <% anime.forEach(function(a) { %>
+      <tr>
+        <td><%= a.title %></td>
+        <td><%= a.releaseYear %></td>
+        <td><%= a.mpaaRating %></td>
+        <td><%= a.cast.join(', ') %></td>
+        <!-- finish the ternary expression to display 'Yes' or 'Nope' -->
+        <td><%= a.nowShowing ? 'Yes' : 'Nope' %></td>
+      </tr>
+    <!-- Close the forEach using EJS here -->
+    <% }); %>
+  </tbody>
+</table>
+
+<%- include('../partials/header') %>
