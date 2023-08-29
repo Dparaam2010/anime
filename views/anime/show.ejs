@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+  <div>Title: </div>
+  <div><%= anime.title %></div>
+  <div>Release Year: </div>
+  <div><%= anime.releaseYear %></div>
+  <div>Rating: </div>
+  <div><%= anime.mpaaRating %></div>
+  <div>Cast: </div>
+  <div><%= anime.cast.join(', ') %></div>
+  <div>Showing On NetFlix: </div>
+  <div><%= anime.nowShowing ? 'Yes' : 'Nope' %></div>
+</section>
+  
+<%- include('../partials/footer') %>
