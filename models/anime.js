@@ -47,5 +47,5 @@ const animeSchema = new mongoose.Schema({
 });
 
 // Compile the schema into a model and export it
-module.exports = mongoose.model('anime', animeSchema);
+module.exports = mongoose.model('Anime', animeSchema);
 

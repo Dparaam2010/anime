@@ -2,7 +2,7 @@ const Anime = require('../models/anime');
 
 module.exports = {
   create,
-  delete: deleteReview
+  delete: deleteReview,
 };
 
 async function deleteReview(req, res) {
@@ -28,3 +28,5 @@ async function deleteReview(req, res) {
     }
     res.redirect(`/anime/${anime._id}`);
   }
+
+  

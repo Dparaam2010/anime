@@ -9,6 +9,9 @@
   <div><%= anime.mpaaRating %></div>
   <div>Showing On NetFlix: </div>
   <div><%= anime.nowShowing %></div>
+  <form action="/anime/<%= anime.id %>/edit" method="PUT">
+  <button type="submit">Update</button>
+  </form>
 </section>
 
 <br><h2>Reviews</h2>
@@ -49,7 +52,7 @@
             <% if (user?._id.equals(r.user)) { %>
               <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
                 <button type="submit">❌</button>
-              </form>
+                </form>
             <% } %>
           </td>
         </tr>

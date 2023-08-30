@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 
 router.get('/', function(req, res, next) {
-  res.redirect('/anime');
+  res.render('index', { title: 'Anime Time'});
 });
 
 // Google OAuth login route
@@ -22,15 +22,15 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/anime',
-    failureRedirect: '/anime'
+    successRedirect: '/',
+    failureRedirect: '/'
   }
 ));
 
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout(function() {
-    res.redirect('/anime');
+    res.redirect('/');
   });
 });
 
