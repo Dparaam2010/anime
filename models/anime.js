@@ -12,7 +12,14 @@ const reviewSchema = new Schema({
       min: 1,
       max: 5,
       default: 5
-    }
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+      },
+      userName: String,
+      userAvatar: String
   }, {
     timestamps: true
   });
@@ -30,10 +37,11 @@ const animeSchema = new mongoose.Schema({
     type: String,
     enum: ['G', 'PG', 'PG-13', 'R']
   },
-  cast: [String],
+  cast: {
+    type: String,
+},
   nowShowing: { type: Boolean, default: true },
   reviews: [reviewSchema]
-
 }, {
   timestamps: true
 });

@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: palevioletred;
 }
 
 body {
@@ -134,7 +134,7 @@ table td {
 }
 
 hr {
-  color: #424748
+  color: red
 }
 
 #badge-container {
@@ -142,13 +142,13 @@ hr {
   flex-wrap: wrap;
   /* padding: 1rem; */
   width: 80%;
-  border: 2px solid #B8C0C2;
+  border: 2px solid red;
   border-radius: .5rem;
   margin: .5rem 0 2rem;
 }
 
 .badge {
-  background-color: #B8C0C2;
+  background-color: red;
   padding: .5rem;
   margin: .5rem;
   border-radius: .3rem;
@@ -178,6 +178,7 @@ hr {
 }
 
 .review-user {
+  background-color: lightpink;
   display: flex;
   justify-content: center;
   align-items: center;

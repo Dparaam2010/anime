@@ -7,13 +7,11 @@
   <div><%= anime.releaseYear %></div>
   <div>Rating: </div>
   <div><%= anime.mpaaRating %></div>
-  <div>Cast: </div>
-  <div><%= anime.cast.join(', ') %></div>
   <div>Showing On NetFlix: </div>
-  <div><%= anime.nowShowing ? 'Yes' : 'Nope' %></div>
+  <div><%= anime.nowShowing %></div>
 </section>
 
-<br><br><h2>Reviews</h2>
+<br><h2>Reviews</h2>
 <form id="add-review-form" method="POST"
   action="/anime/<%= anime._id %>/reviews">
   <label>Review:</label>
@@ -39,14 +37,28 @@
       </tr>
     </thead>
     <tbody>
+        <% let total = 0 %>
       <% anime.reviews.forEach(function(r) { %>
+        <% total += r.rating %>
         <tr>
-          <!-- .toLocaleDateString() provides a more friendly date format -->
+          <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
           <td><%= r.createdAt.toLocaleDateString() %></td>
           <td><%= r.content %></td>
           <td><%= r.rating %></td>
+          <td>
+            <% if (user?._id.equals(r.user)) { %>
+              <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                <button type="submit">❌</button>
+              </form>
+            <% } %>
+          </td>
         </tr>
-      <% }); %>
+      <% }) %>
+      <!-- Add a row to display the avg AFTER the forEach iteration  -->
+      <tr>
+        <td colspan="2"></td>
+        <td><strong><%= (total / anime.reviews.length).toFixed(1) %></strong></td>
+      </tr>
     </tbody>
   </table>
 <% } else { %>

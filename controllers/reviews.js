@@ -1,16 +1,30 @@
 const Anime = require('../models/anime');
 
 module.exports = {
-  create
+  create,
+  delete: deleteReview
 };
 
-async function create(req, res) {
-  const anime = await Anime.findById(req.params.id);
-  anime.reviews.push(req.body);
-  try {
+async function deleteReview(req, res) {
+    const anime = await Anime.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+    if (!anime) return res.redirect('/anime');
+    anime.reviews.remove(req.params.id);
     await anime.save();
-  } catch (err) {
-    console.log(err);
+    res.redirect(`/anime/${anime._id}`);
   }
-  res.redirect(`/anime/${anime._id}`);
-}
+  
+  async function create(req, res) {
+    const anime = await Anime.findById(req.params.id);
+  
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
+  
+    anime.reviews.push(req.body);
+    try {
+      await anime.save();
+    } catch (err) {
+      console.log(err);
+    }
+    res.redirect(`/anime/${anime._id}`);
+  }
