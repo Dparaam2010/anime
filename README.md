@@ -24,8 +24,10 @@ Acess AnimeTime Here --> :https://animetime-830324fc00e9.herokuapp.com/
 5. If you click on details on the anime list page it will send you here. on this page you can update the anime movie or tv information, you can also leave a review on that paticular movie or tv show. If you decided you would like to get rid of your review you can click on the X button and it will delete your review. 
 6.<img src=""/>![Alt text](image-3.png)
 #### Next Steps (iceBox)
-* I would like for on the add anime page streaming on Netflix i made it a boolen so it says true or false i would like to change that so you can add in where excatly that tv show or movie can be streamed at.
-* I would like to add more information about that paticular anime on the add anime page.
-* I would like to update my reviews so if you post a review you can go back in later and update it
+* I would like on the add anime page the streaming on Netflix I would like it to be able to add where you can stream it on
+* I would like to add more information about that anime on the add anime page.
+* I would like to update my reviews so if you post a review, you can go back in later and update it
 * I would like for the anime list to go in Alphabetical order
-* 
+* I would like to be able to delete from the Anime list as well
+* I would also like two separate pages one for Anime Tv Shows and another for Anime Movies
+
