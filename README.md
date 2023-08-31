@@ -4,7 +4,7 @@ The App's name is Anime Time.
 Introducing "AnimeTime" your ultimate destination for finding a list of anime entertainment where you can add an anime tv show or movie of your choice you can also find a anime tv show or movie off AnimeTime's list with the information about that particular anime Tv show or Movie for example. The Title, release Year, does it show on Netflix, etc... You can also leave a review about that anime to give others a chance to decide if that’s the anime for them. Discover a vast list of anime content from timeless classics to the latest releases. You must be logged in to access AnimeTime. Experience the next level of anime information and reviews with AnimeTime. Download the app now and embark on a journey through the captivating reviews of animation. 
 
 Your future favorite show awaits you.
-Acess AnimeTime Here --> :
+Acess AnimeTime Here --> :https://animetime-830324fc00e9.herokuapp.com/
 
 <img src=""/>![Alt text](image.png)
 ## The Technologies i Used:
