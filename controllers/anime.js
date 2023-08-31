@@ -54,7 +54,6 @@ module.exports = {
         {_id: req.params.id, userRecommending: req.user._id},
         // update object with updated properties
         req.body,
-        // options object {new: true} returns updated doc
         {new: true}
       );
       return res.redirect(`/anime/${updatedAnime._id}`);
