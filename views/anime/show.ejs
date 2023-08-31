@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Title: </div>
+  <div>🍄Title: </div>
   <div><%= anime.title %></div>
-  <div>Release Year: </div>
+  <div>🍄Release Year: </div>
   <div><%= anime.releaseYear %></div>
-  <div>Rating: </div>
+  <div>🍄Rating: </div>
   <div><%= anime.mpaaRating %></div>
-  <div>Showing On NetFlix: </div>
+  <div>🍄Showing On NetFlix: </div>
   <div><%= anime.nowShowing %></div>
   <form action="/anime/<%= anime.id %>/edit" method="PUT">
   <button type="submit">Update</button>
   </form>
 </section>
 
-<br><h2>Reviews</h2>
+<br><h2>🍄Reviews</h2>
 <form id="add-review-form" method="POST"
   action="/anime/<%= anime._id %>/reviews">
   <label>Review:</label>
@@ -34,9 +34,9 @@
   <table>
     <thead>
       <tr>
-        <th>Date</th>
-        <th>Review</th>
-        <th>Rating</th>
+        <th>🍄Date</th>
+        <th>🍄Review</th>
+        <th>🍄Rating</th>
       </tr>
     </thead>
     <tbody>
